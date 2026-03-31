@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="animation"></div>
+
+<div class="container">
+
+    <header>
+        <h1>Weather App</h1>
+        <button id="darkModeToggle">🌙</button>
+    </header>
+
+    <!--  Search -->
+    <div class="search-box glass">
+        <input type="text" id="cityInput" placeholder="Search city...">
+        <button onclick="searchCity()">Search</button>
+    </div>
+
+    <!--  Weather Card -->
+    <div class="weather-card glass">
+        <h2 id="location">Detecting location...</h2>
+        <h1 id="temp">--°C</h1>
+        <p id="condition">Loading...</p>
+
+        <div class="extra-info">
+            <div class="info-card">
+                <span class="label">💧 Humidity</span>
+                <span class="value" id="humidity">--%</span>
+            </div>
+
+            <div class="info-card">
+                <span class="label">🌬️ Wind Speed</span>
+                <span class="value" id="wind">-- km/h</span>
+            </div>
+
+            <div class="info-card">
+                <span class="label">🌡️ Feels Like</span>
+                <span class="value" id="feels">--°C</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Graph -->
+    <div class="glass chart-box">
+        <h3>📊 Hourly Temperature</h3>
+        <canvas id="hourlyChart"></canvas>
+    </div>
+
+    <!-- Forecast -->
+    <h2>7-Day Forecast</h2>
+    <div class="forecast" id="forecast"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
